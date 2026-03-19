@@ -1,4 +1,143 @@
-<!-- FORM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NATIONAL BLOCK INDUSTRY</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+/* HEADER */
+.header img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* CONTENT */
+.container{
+    padding:20px;
+}
+
+h1,h2{
+    color:gold;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* FORM */
+form{
+    margin-top:30px;
+}
+
+.input-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.full{
+    grid-column:1 / 3;
+}
+
+input,select{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+/* CHECKBOX */
+.checkbox-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+/* BUTTON */
+button, .btn{
+    margin-top:10px;
+    padding:12px;
+    width:100%;
+    background:gold;
+    border:none;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:none;
+    color:#000;
+    display:block;
+}
+
+/* MAP */
+.map{
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER IMAGE -->
+<div class="header">
+<img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/4c13a37ea617ddc748cc04d1fc9121b1b90d09ec/1773902958180.png">
+</div>
+
+<div class="container">
+
+<h1>NATIONAL BLOCK INDUSTRY</h1>
+<p>Subsidiary of G.N. ODU & SONS LTD</p>
+
+<h2>Product Description</h2>
+<p>The most accredited manufacturers of blocks & electric poles.</p>
+
+<h2>NBI Products</h2>
+<ul>
+<li>Blocks</li>
+<li>Electric Poles</li>
+<li>Building Materials</li>
+<li>Paving Stones</li>
+<li>Granite</li>
+<li>Kerbs</li>
+</ul>
+
+<h2>Address</h2>
+<p>Kilometer 4 Ibusa/Asaba Road, Asaba, Nigeria.</p>
+
+<h2>Gallery</h2>
+<div class="gallery">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(66).jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/18283603_blockindustryng7_jpeg4fbc5a82781663c53bf41d6b7ba7747a.jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/Automatic-Interlock-Brick-Making-Machine..jpg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/drain-flab.jpg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(65).jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(67).jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(68).jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(69).jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(70).jpeg">
+  <img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/27e8459f59d970d4e8f164b725822c56fd3e56d4/images%20(71).jpeg">
+</div>
+
 <h2>Place Your Orders</h2>
 <form onsubmit="sendToWhatsApp(); return false;">
 
@@ -33,7 +172,16 @@
 WhatsApp: +2348037420398
 </a>
 
-</form>
+<!-- MAP -->
+<div class="map">
+<h2>Our Location</h2>
+<iframe 
+src="https://maps.google.com/maps?q=Kilometer%204%20Ibusa%20Asaba%20Road%20Asaba%20Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300" style="border:0;">
+</iframe>
+</div>
+
+</div>
 
 <script>
 function sendToWhatsApp(){
@@ -67,3 +215,6 @@ Thank you! 🙏`;
     window.open(`https://wa.me/2348037420398?text=${encodedMessage}`, "_blank");
 }
 </script>
+
+</body>
+</html>
