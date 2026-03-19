@@ -1,1 +1,195 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NATIONAL BLOCK INDUSTRY</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+/* HEADER */
+.header img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* CONTENT */
+.container{
+    padding:20px;
+}
+
+h1,h2{
+    color:gold;
+}
+
+/* FORM */
+form{
+    margin-top:30px;
+}
+
+.input-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.full{
+    grid-column:1 / 3;
+}
+
+input,select{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+/* CHECKBOX */
+.checkbox-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+/* BUTTON */
+button, .btn{
+    margin-top:10px;
+    padding:12px;
+    width:100%;
+    background:gold;
+    border:none;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:none;
+    color:#000;
+    display:block;
+}
+
+/* MAP */
+.map{
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER IMAGE -->
+<div class="header">
+<img src="https://raw.githubusercontent.com/allroundadvert/NATIONAL-BLOCK-INDUSTRY-/4c13a37ea617ddc748cc04d1fc9121b1b90d09ec/1773902958180.png">
+</div>
+
+<div class="container">
+
+<h1>NATIONAL BLOCK INDUSTRY</h1>
+<p>Subsidiary of G.N. ODU & SONS LTD</p>
+
+<h2>Product Description</h2>
+<p>The most accredited manufacturers of vibrated blocks and electric poles.</p>
+
+<h2>NBI Products</h2>
+<ul>
+<li>Blocks</li>
+<li>Electric Poles</li>
+<li>Building Materials</li>
+<li>Paving Stones</li>
+<li>Granite</li>
+<li>Kerbs</li>
+</ul>
+
+<h2>Address</h2>
+<p>Kilometer 4 Ibusa/Asaba Road, Asaba, Nigeria.</p>
+
+<h2>Customer Form</h2>
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<div class="input-group">
+<input type="text" id="name" placeholder="Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<input class="full" type="text" id="location" placeholder="Location" required>
+
+<select class="full" id="delivery">
+<option>Pick-up</option>
+<option>Delivery</option>
+</select>
+</div>
+
+<div class="checkbox-group">
+<label><input type="checkbox" value="Blocks"> Blocks</label>
+<label><input type="checkbox" value="Electric Poles"> Electric Poles</label>
+<label><input type="checkbox" value="Building Materials"> Building Materials</label>
+<label><input type="checkbox" value="Paving Stones"> Paving Stones</label>
+<label><input type="checkbox" value="Granite"> Granite</label>
+<label><input type="checkbox" value="Kerbs"> Kerbs</label>
+</div>
+
+<button type="submit">Submit</button>
+
+<!-- CALL BUTTON -->
+<a class="btn" href="tel:08037420398">Call: 08037420398</a>
+
+<!-- WHATSAPP BUTTON -->
+<a class="btn" href="https://wa.me/2348037420398" target="_blank">
+WhatsApp: +2348037420398
+</a>
+
+</form>
+
+<!-- MAP -->
+<div class="map">
+<h2>Our Location</h2>
+<iframe 
+src="https://maps.google.com/maps?q=Kilometer%204%20Ibusa%20Asaba%20Road%20Asaba%20Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300" style="border:0;">
+</iframe>
+</div>
+
+</div>
+
+<script>
+function sendToWhatsApp(){
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let location = document.getElementById("location").value;
+    let delivery = document.getElementById("delivery").value;
+
+    let services = document.querySelectorAll('input[type="checkbox"]:checked');
+    let selected = [];
+    services.forEach(s => selected.push(s.value));
+
+    let message = 
+`Hello NATIONAL BLOCK INDUSTRY
+
+I would like to make an inquiry/order:
+
+Name: ${name}
+Phone: ${phone}
+Location: ${location}
+Request Type: ${delivery}
+
+Products:
+${selected.join(", ")}
+
+Please send price and details.
+Thank you.`;
+
+    let encodedMessage = encodeURIComponent(message);
+
+    window.open(`https://wa.me/2348037420398?text=${encodedMessage}`, "_blank");
+}
+</script>
+
+</body>
+</html>
